@@ -15,7 +15,7 @@ server.use(express.static(path.join(__dirname, 'dist')));
 server.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: resolvers,
-  graphiql: process.env.NODE_ENV === 'development',
+  graphiql: (process.env.NODE_ENV !== 'production'),
   // context: { db: db },
 }));
 
