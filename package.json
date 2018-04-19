@@ -1,0 +1,44 @@
+{
+  "name": "news-service",
+  "version": "0.1.0",
+  "description": "a small news GraphQL API",
+  "main": "server.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "node server.js",
+    "start:watch": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alan B Smith <a.bax.smith@gmail.com> (https://github.com/alanbsmith)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "knex": "^0.14.6",
+    "node-fetch": "^2.1.2",
+    "pg": "^7.4.1"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.4",
+    "nodemon": "^1.17.3",
+    "prettier": "^1.12.1"
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanbsmith/news-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanbsmith/news-service/issues"
+  },
+  "homepage": "https://github.com/alanbsmith/news-service#readme"
+}
